@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1220"><link rel="manifest" href="manifest.json">
+<title>Trading AI Pro</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div><span class="eyebrow">CENTRO DE INVERSIÓN</span><h1>TRADING <b>AI PRO</b></h1></div><span class="status">PROTOTIPO</span></header>
+<nav>
+<button class="tab active" data-tab="inicio">Inicio</button><button class="tab" data-tab="oportunidades">Oportunidades</button><button class="tab" data-tab="analista">Analista IA</button><button class="tab" data-tab="cartera">Mi cartera</button><button class="tab" data-tab="mercados">Mercados</button>
+</nav>
+<main>
+<section id="inicio" class="page active">
+<div class="hero"><div><p class="eyebrow">PANEL GENERAL</p><h2>Tu mercado, de un vistazo.</h2><p class="muted">Seguimiento y control de tus inversiones en un solo lugar.</p></div><div class="orb">AI</div></div>
+<div class="grid metrics"><article class="card"><span class="muted">Capital registrado</span><strong id="capital">0,00 €</strong></article><article class="card"><span class="muted">Valor estimado</span><strong id="value">0,00 €</strong></article><article class="card"><span class="muted">Resultado realizado</span><strong id="realized">0,00 €</strong></article></div>
+<article class="card"><div class="row"><h3>Mercados a vigilar</h3><span class="pill">Lista de seguimiento</span></div><div class="watch"><span>S&P 500 <small>USA</small></span><span>NASDAQ 100 <small>USA</small></span><span>IBEX 35 <small>España</small></span><span>Bitcoin <small>Cripto</small></span><span>Oro <small>Materia prima</small></span><span>EUR/USD <small>Divisas</small></span></div><p class="hint">Las cotizaciones reales todavía no están conectadas. No se muestran precios inventados.</p></article>
+</section>
+<section id="oportunidades" class="page">
+<div class="section-head"><div><p class="eyebrow">ESCÁNER</p><h2>Oportunidades del mercado</h2></div><span class="pill amber">Pendiente de datos en vivo</span></div>
+<article class="card"><h3>Cómo funcionará el ranking diario</h3><p class="muted">El sistema puntuará activos usando tendencia, volumen, volatilidad, RSI, MACD, noticias y riesgo. Solo aparecerán señales cuando haya datos suficientes y recientes.</p><div class="score-row"><span>Calidad de datos</span><b>Por conectar</b></div><div class="score-row"><span>Universo de activos</span><b>Global, según proveedor</b></div><div class="score-row"><span>Selección prevista</span><b>Hasta 20 activos</b></div><p class="hint">No se generan recomendaciones reales en esta versión de demostración.</p></article>
+</section>
+<section id="analista" class="page">
+<p class="eyebrow">ASISTENTE DE INVERSIÓN</p><h2>Analista IA</h2>
+<article class="card"><div class="ai-badge">AI</div><h3>Análisis fundamentado, no señales a ciegas.</h3><p class="muted">La versión conectada podrá resumir resultados, noticias, valoración, indicadores y riesgos de cada activo. También explicará qué datos respaldan o debilitan una posible operación.</p>
+<label for="question">¿Qué quieres analizar?</label><textarea id="question" placeholder="Ej.: Analiza Nvidia y explica sus riesgos a corto plazo."></textarea><button class="primary" id="ask">Preparar consulta</button><div id="answer" class="answer hidden"></div><p class="hint">La IA todavía no está conectada a un servicio externo. No introduzcas claves ni contraseñas aquí.</p></article>
+</section>
+<section id="cartera" class="page">
+<div class="section-head"><div><p class="eyebrow">CONTROL DE CAPITAL</p><h2>Mi cartera</h2></div></div>
+<div class="grid metrics"><article class="card"><span class="muted">Capital aportado</span><strong id="p-capital">0,00 €</strong></article><article class="card"><span class="muted">Posiciones abiertas</span><strong id="positions">0</strong></article></div>
+<article class="card"><h3>Registrar operación</h3><form id="trade-form">
+<div class="form-grid"><label>Activo / ticker<input required id="ticker" placeholder="NVDA"></label><label>Tipo<select id="side"><option value="buy">Compra</option><option value="sell">Venta</option></select></label><label>Unidades<input required id="qty" type="number" min="0.00000001" step="any"></label><label>Precio por unidad (€)<input required id="price" type="number" min="0.00000001" step="any"></label><label>Comisión (€)<input id="fee" type="number" min="0" step="0.01" value="0"></label><label>Fecha<input id="date" type="date" required></label></div>
+<button class="primary" type="submit">Guardar operación</button></form></article>
+<article class="card"><div class="row"><h3>Historial</h3><button class="text-btn" id="clear">Borrar datos</button></div><div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Activo</th><th>Tipo</th><th>Unidades</th><th>Precio</th><th>Total</th></tr></thead><tbody id="history"><tr><td colspan="6" class="muted">Todavía no hay operaciones.</td></tr></tbody></table></div><p class="hint">Los datos se guardan únicamente en este dispositivo/navegador. Haz una copia antes de borrar los datos del navegador.</p></article>
+</section>
+<section id="mercados" class="page">
+<p class="eyebrow">COBERTURA GLOBAL</p><h2>Mercados</h2>
+<div class="grid market-grid">
+<article class="card"><h3>Acciones</h3><p>NYSE, Nasdaq, bolsas europeas y otros mercados disponibles según proveedor.</p></article>
+<article class="card"><h3>Índices</h3><p>S&P 500, Nasdaq 100, Dow Jones, IBEX 35, DAX, CAC 40 y otros.</p></article>
+<article class="card"><h3>Criptoactivos</h3><p>Bitcoin, Ethereum y principales activos admitidos por el proveedor.</p></article>
+<article class="card"><h3>Materias primas</h3><p>Oro, plata, petróleo, gas y otros instrumentos disponibles.</p></article>
+<article class="card"><h3>Divisas</h3><p>EUR/USD y principales pares de divisas.</p></article>
+<article class="card"><h3>Datos</h3><p>Modo híbrido: fuentes gratuitas donde sea viable y datos de pago para mercados o activos prioritarios.</p></article>
+</div>
+</section>
+</main>
+<footer>TRADING AI PRO · Herramienta informativa. No constituye asesoramiento financiero.</footer>
+<script src="app.js"></script>
+</body></html>

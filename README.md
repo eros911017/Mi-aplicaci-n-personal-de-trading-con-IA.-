@@ -1,0 +1,1 @@
+# Mi-aplicaci-n-personal-de-trading-con-IA.-
